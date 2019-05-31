@@ -1,11 +1,10 @@
 import React from 'react';
-import Toggle, { LogginButton } from './components/Scripts/Toggle/Toggle'
-
+import Page from './components/Scripts/WarningBanner/WarningBanner'
 function App() {
+	// const messages = ['React', 'Re: React', 'Re:Re: React'];
 	return (
 		<>
-			<Toggle />
-			<LogginButton />
+			<Page />
 		</>
 	);
 }
