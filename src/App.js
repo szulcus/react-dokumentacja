@@ -1,12 +1,11 @@
 import React from 'react';
-import Clock from './components/Scripts/Clock/Clock'
+import Toggle, { LogginButton } from './components/Scripts/Toggle/Toggle'
 
 function App() {
 	return (
 		<>
-			<Clock />
-			<Clock />
-			<Clock />
+			<Toggle />
+			<LogginButton />
 		</>
 	);
 }
