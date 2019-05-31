@@ -1,12 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import avatar from './components/images/me.png';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<h1>Witaj, świecie!</h1>, document.getElementById('root'));
+function formatName(user) {
+	return `${user.firstName} ${user.lastName}`;
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+function getGreeting(user) {
+	if (user) {
+		return <h1>Witaj, {formatName(user)}!</h1>;
+	}
+	return <h1>Witaj, nieznajomy</h1>;
+}
+
+const user = {
+	firstName: 'Jakub',
+	lastName: 'Schulz',
+	avatarUrl: { avatar }
+};
+
+const reactElement = React.createElement(
+	'h1',
+	{ className: 'greeting' },
+	'Witaj świecie!'
+);
+
+const element = (
+	<>
+		{reactElement}
+		<img className="avatar" src={avatar} alt="" />
+		{getGreeting(user)}
+		<div tabIndex="0">Tab - test</div>
+	</>
+);
+
+ReactDOM.render(element, document.getElementById('root'));
+
 serviceWorker.unregister();
