@@ -1,9 +1,18 @@
 import React from 'react';
-import Calculator from './components/Scripts/CelsiusCalculator/Calculator'
+import SignUpDialog from './components/Scripts/Welcome/WelcomeDialog'
+
+// function Contacts() {
+// 	return <div className="Contacts" />;
+// }
+
+// function Chat() {
+// 	return <div className="Chat" />;
+// }
+
 function App() {
 	return (
 		<>
-			<Calculator />
+			<SignUpDialog />
 		</>
 	);
 }
