@@ -1,9 +1,9 @@
 import React from 'react';
-import Reservation from './components/Scripts/Reservation/Reservation';
+import Calculator from './components/Scripts/CelsiusCalculator/Calculator'
 function App() {
 	return (
 		<>
-			<Reservation />
+			<Calculator />
 		</>
 	);
 }
